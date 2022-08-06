@@ -3,8 +3,7 @@ import Axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { faL } from '@fortawesome/free-solid-svg-icons'
 import './Login.css'
-import ArrowBackwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded'
-
+import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 const Login = () => {
   const navigate = useNavigate()
 
@@ -36,7 +35,7 @@ const Login = () => {
               navigate('/')
             }}
           >
-            <ArrowBackwardRoundedIcon />
+            <ArrowBackRoundedIcon />
           </div>
           <div className='login_label'>
             <p>Login</p>

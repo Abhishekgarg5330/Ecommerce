@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from 'react'
+import { useStateContext } from '../context/StateContext'
 import './Button.css'
 
 export const Button = ({data}) => {
-    const [value, setValue] = useState(1);
-    useEffect(() => {
-        data.cart = value < 0? 0: value; 
-    },[value])
-
+  const [toggleCartItemQuantity] = useStateContext();
   return (
-    <div style={{display: 'flex'}}>
-        <button type='button' className='button button__mins' onClick={() => setValue(value-1)}>-</button>
-        <button type='button' className='button__num'>{value}</button>
-        <button type='button' className='button button__plus' onClick={() => setValue(value+1)}>+</button>
+    <div>
+       <div className="product" key={data.id}>
+            <div className="item-title">
+              <div className="flex bottom">
+                <div>
+                  <p className="quantity-dec">
+                    <span className="minus" onClick={() => toggleCartItemQuantity(data.id, 'dec')}>
+                      -
+                    </span>
+                    <span className="num">
+                      
+                    </span>
+                    <span className="plus" onClick={() => toggleCartItemQuantity(data.id, 'inc')}>
+                      +
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   )
 }

@@ -31,14 +31,13 @@ export const CartDetails = () => {
    
   }
   return (
-    <div className='cart-wrapper' style={{ fontSize: '30px' }}>
+    <div className='cart-wrapper'>
       <div
         style={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
-          margin: '10px 0px',
-          fontSize: '30px'
+          margin: '10px 0px'
         }}
       >
         <div></div>

@@ -49,26 +49,14 @@ const Footer = () => {
     <div className='footer'>
       <div></div>
       <div
-        style={{
-          backgroundColor: 'gray',
-          width: '150px',
-          height: '50px',
-          opacity: '0.5',
-          borderRadius: '10px',
-          paddingTop: '0',
-          color: 'white',
-          display: 'flex',
-          flexDirection: 'row',
-          padding: '15px 15px',
-          justifyContent: 'space-between'
-        }}
+        className="details"
       >
         <div>
           <p style={{ margin: '5px 5px' }}>{`${totalQuantities} Item(s)`}</p>
           <p>{`Total Rs. ${totalPrice}`}</p>
         </div>
         <div>
-          <button onClick={() => someFunc()}>
+          <button onClick={() => someFunc()} style={{backgroundColor: 'gray', opacity:'0.8', border: 'none', color:'white'}}>
             {!showCart && <KeyboardArrowUpIcon fontSize='large' />}
             {showCart && <KeyboardArrowDownIcon fontSize='large' />}
           </button>
@@ -87,7 +75,7 @@ const Footer = () => {
               <div
                 style={{
                   color: 'white',
-                  textDecoration: 'none'
+                  textDecoration: 'none',
                 }}
               >
                 Login

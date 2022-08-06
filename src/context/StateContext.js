@@ -8,7 +8,6 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0)
   const [totalQuantities, setTotalQuantities] = useState(0)
   const [qty, setQty] = useState(1)
-  const [toggleAdd, setToggleAdd] = useState(true)
 
   let foundProduct
   let index
@@ -60,7 +59,7 @@ export const StateContext = ({ children }) => {
         // decQty()
       } else {
         // console.log("e");
-        setToggleAdd(false)
+        // setToggleAdd(false)
       }
     }
   }
@@ -86,9 +85,7 @@ export const StateContext = ({ children }) => {
         incQty,
         decQty,
         onAdd,
-        toggleCartItemQuantity,
-        toggleAdd,
-        setToggleAdd
+        toggleCartItemQuantity
       }}
     >
       {children}

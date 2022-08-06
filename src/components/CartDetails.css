@@ -49,6 +49,7 @@
     right: 0;
     bottom: 100px;
     z-index: 100;
+    font-size: 30px;
     /* will-change: transform; */
     /* transition: all 1s ease-in-out; */
   
@@ -65,4 +66,10 @@
 
   .product {
     margin: 20px 10px;
+  }
+
+  @media screen and (max-width: 400px) {
+    .cart-wrapper {
+      font-size: 15px;
+    }
   }

@@ -25,3 +25,18 @@
 .card__button:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 400px) {
+    .card__img {
+        width: 8rem;
+        height: 8rem;
+        margin: 10px 10px;
+    }
+    .card_details {
+        font-size: 0.5rem;
+    }
+    .card__button{
+        margin-top: 120px;
+        font-size: 8px;
+    }
+}
